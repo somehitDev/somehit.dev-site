@@ -5,5 +5,3 @@
     source of <a href="https://somehit.dev">somehit.dev</a>
 </h3>
 <br/>
-
-<iframe src="https://somehit.dev"></iframe>
