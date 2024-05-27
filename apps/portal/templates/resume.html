@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Somehit.DEV::RESUME{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ baseUrl }}assets/css/resume.css">
+{% endblock %}
+
+{% block content %}
+<div class="content spacer flex-column">
+    <div class="mobileWarning">※ Some contents are not displayed normally on mobile. Please check on desktop page.</div>
+    <zero-md id="resumeContent" src="{{ baseUrl }}assets/md/resume.md" data-theme="light">
+        <template>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css" />
+            <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11/styles/github.min.css" /> -->
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="{{ baseUrl }}assets/css/resume.md.css">
+        </template>
+
+        <script type="text/javascript" src="{{ baseUrl }}assets/js/resume.md.js"></script>
+    </zero-md>
+</div>
+{% endblock %}

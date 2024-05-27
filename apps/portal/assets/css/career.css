@@ -1,0 +1,115 @@
+
+body {
+    overflow-y: auto;
+}
+
+#contentFrame {
+    min-height: 100vh;
+}
+
+.content {
+    padding: 20px;
+}
+
+#totalYear {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#careerHistory {
+    padding: 0px 10px;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+#careerHistory .tdYearMark {
+    width: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#careerHistory .tdYearMarkSpace {
+    width: 10px;
+}
+
+#careerHistory .tdYear {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#careerHistory .tdMonth {
+    font-size: 22px;
+}
+
+#careerHistory .tdSubject {
+    font-size: 18px;
+}
+
+#careerHistory .tdSubjectSpace {
+    width: 5px;
+}
+
+#careerHistory .tdContent {
+    font-size: 18px;
+}
+
+@media screen and (max-width:1023px) {
+    #totalYear {
+        font-size: 16px;
+    }
+
+    #careerHistory .tdYearMark {
+        width: 19px;
+    }
+
+    #careerHistory .tdYear {
+        font-size: 18px;
+        width: 50px;
+    }
+    
+    #careerHistory .tdMonth {
+        font-size: 14px;
+        width: 20px;
+    }
+    
+    #careerHistory .tdSubject {
+        font-size: 8px;
+        font-weight: bold;
+    }
+    
+    #careerHistory .tdContent {
+        font-size: 9px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #careerHistory .tdYearMark {
+        color: white;
+        background-color: #708090;
+    }
+
+    #careerHistory .tdMonth {
+        color: #2f4f4f;
+    }
+
+    #careerHistory .tdSubject {
+        font-size: 18px;
+        color: #708090;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #careerHistory .tdYearMark {
+        color: white;
+        background-color: #c5cbd3;
+    }
+
+    #careerHistory .tdMonth {
+        color: #afcfcf;
+    }
+
+    #careerHistory .tdSubject {
+        font-size: 18px;
+        color: #c5cbd3;
+    }
+}

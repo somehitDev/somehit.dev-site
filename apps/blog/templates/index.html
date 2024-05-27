@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}blog.Somehit.DEV{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ baseUrl }}assets/css/index.css">
+{% endblock %}
+
+{% block content %}
+<div class="content spacer" id="boardLayout">
+    <div class="flex-column" id="boardLayoutNI">
+        <div class="board-box spacer">
+            <div class="box-title">NEWS</div>
+            <div class="box-content"></div>
+        </div>
+        <div class="board-box spacer">
+            <div class="box-title">ISSUES</div>
+            <div class="box-content"></div>
+        </div>
+    </div>
+    <div class="board-box" id="freeBoardBox">
+        <div class="box-title">FREE BOARD</div>
+        <div class="box-content"></div>
+    </div>
+</div>
+{% endblock %}

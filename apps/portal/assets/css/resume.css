@@ -1,0 +1,27 @@
+
+body {
+    overflow-y: auto;
+}
+
+#contentFrame {
+    min-height: 100vh;
+}
+
+.content {
+    padding: 10px 45px;
+}
+
+.mobileWarning {
+    display: none;
+}
+
+@media screen and (max-width:1023px) {
+    .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .mobileWarning {
+        display: block;
+    }
+}

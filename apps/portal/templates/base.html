@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+
+        <link rel="icon" type="image/png" href="{{ baseUrl }}assets/images/favicon.PNG" />
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+        <!-- zero-md -->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
+
+        <!-- fontawesome4.7 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="{{ baseUrl }}assets/css/base.css">
+        <!-- <script type="text/javascript" src="{{ baseUrl }}assets/js/base.js"></script> -->
+        {% block header %}{% endblock %}
+    </head>
+    <body>
+        <div class="flex-column" id="contentFrame">
+            <!-- navbar -->
+            <div class="nav-bar">
+                <a class="nav-item" id="navHome" href="{{ baseUrl }}">SOMEHIT.DEV</a>
+                <div class="nav-item" style="width:40px;"></div>
+                {% if currentPage == 'career' %}
+                <a class="nav-item" href="{{ baseUrl }}career/" data-selected="true">CAREER</a>
+                {% else %}
+                <a class="nav-item" href="{{ baseUrl }}career/">CAREER</a>
+                {% endif %}
+                {% if currentPage == 'resume' %}
+                <a class="nav-item" href="{{ baseUrl }}resume/" data-selected="true">RESUME</a>
+                {% else %}
+                <a class="nav-item" href="{{ baseUrl }}resume/">RESUME</a>
+                {% endif %}
+                <!-- <a class="nav-item" href="{{ blogUrl }}">BLOG</a> -->
+                <div class="spacer"></div>
+            </div>
+
+            {% block content %}{% endblock %}
+
+            <!-- footer -->
+            <div class="flex-row" id="footer">
+                <div class="spacer"></div>
+                <div style="margin-right:40px;display:flex;align-items:center;">Copyright© {{ yearString }} SOMEHIT.DEV</div>
+                <div class="flex-column footer-contacts">
+                    <div>MAIL: <a href="mailto://this.dev.somehit@gmail.com">this.dev.somehit@gmail.com</a></div>
+                    <div>TEL: <a href="tel:+82 10-2124-5082">+82 10-2124-5082</a></div>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </body>
+</html>

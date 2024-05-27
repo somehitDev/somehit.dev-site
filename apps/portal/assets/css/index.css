@@ -1,0 +1,55 @@
+
+body {
+    height: 100vh;
+}
+
+#contentFrame {
+    height: 100%;
+}
+
+#portraitLD {
+    width: 60vh;
+    margin-left: -7vh;
+    margin-right: -15vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#profileList {
+    padding: 40px 5px;
+}
+
+#profileList > .profile-row {
+    padding: 0px 5px;
+}
+
+#profileList > .profile-row.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#profileList > .profile-row.title:not(:first-child) {
+    margin-top: 20px;
+}
+
+#profileList > .profile-row.text {
+    font-size: 20px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:1023px) {
+    #portraitLD {
+        width: 100%;
+        margin-left: -7vh;
+        margin-right: -15vh;
+    }
+
+    #profileList > .profile-row.title {
+        font-size: 20px;
+    }
+
+    #profileList > .profile-row.text {
+        font-size: 15px;
+    }
+}

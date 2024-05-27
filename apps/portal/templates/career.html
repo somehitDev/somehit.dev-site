@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Somehit.DEV::CAREER{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ baseUrl }}assets/css/career.css">
+{% endblock %}
+
+{% block content %}
+<div class="content spacer flex-column">
+    <div id="totalYear">Total: {{ totalYear }} years</div>
+    <table id="careerHistory" border="0">
+        {% for year, info in careerHistory.items()|sort(attribute = '0', reverse = True) %}
+            {% for row in info|sort(attribute = 'month', reverse = True) %}
+            {% if loop.index == 1 %}
+            <tr></tr>
+            {% endif %}
+            <tr>
+                {% if loop.index == 1 %}
+                <td class="tdYearMark">></td>
+                <td class="tdYearMarkSpace"></td>
+                <td class="tdYear">
+                    {{ year }}
+                </td>
+                {% else %}
+                <td></td>
+                <td class="tdYearMarkSpace"></td>
+                <td class="tdYear"></td>
+                {% endif %}
+                <td class="tdMonth">{{ row["month"] }}</td>
+                <td class="tdSubject">{{ row["subject"] }}</td>
+                <td class="tdSubjectSpace"></td>
+                <td class="tdContent">{{ row["content"] }}</td>
+            </tr>
+            {% endfor %}
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

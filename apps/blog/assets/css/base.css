@@ -1,0 +1,131 @@
+
+body {
+    width: 100vw;
+    margin: 0px;
+    overflow: hidden;
+    user-select: none;
+
+    font-family: "Nanum Gothic Coding", monospace;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#contentFrame {
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+}
+
+.flex-row > .spacer, .flex-column > .spacer {
+    flex: 1;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.nav-bar > .nav-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.content {
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+#navHome {
+    font-size: 20px;
+}
+
+#footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px 0px;
+}
+
+#footer > .footer-contacts > *:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media screen and (max-width:1023px) {
+    body {
+        font-size: 13px;
+    }
+
+    #navHome {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .nav-bar, #footer {
+        background-color: #C9C9C9;
+        color: white;
+    }
+
+    #navHome {
+        background-color: #708090;
+        color: white;
+    }
+
+    .nav-bar > .nav-item[data-selected="true"] {
+        color: white;
+        background-color: #778899;
+    }
+
+    .nav-bar > .nav-item.blank {
+        background-color: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0C0E12;
+        color: white;
+    }
+
+    .nav-bar, #footer {
+        background-color: #f2f2f2;
+        color: black;
+    }
+
+    .nav-bar > .nav-item[data-selected="true"] {
+        color: black;
+        background-color: #e2e5e9;
+    }
+
+    #navHome {
+        background-color: #c5cbd3;
+        color: black;
+    }
+
+    .nav-bar > .nav-item.blank {
+        background-color: black;
+    }
+}

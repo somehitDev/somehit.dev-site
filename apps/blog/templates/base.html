@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+
+        <link rel="icon" type="image/png" href="{{ baseUrl }}assets/images/favicon.PNG" />
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+        <!-- SimpleMDE -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+        <!-- fontawesome4.7 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="{{ baseUrl }}assets/css/base.css">
+        {% block header %}{% endblock %}
+    </head>
+    <body>
+        <div class="flex-column" id="contentFrame">
+            <!-- navbar -->
+            <div class="flex-row nav-bar">
+                <a class="nav-item" id="navHome" href="{{ baseUrl }}">BLOG</a>
+                <div class="nav-item" style="width:40px;"></div>
+                <a class="nav-item" href="{{ baseUrl }}news">NEWS</a>
+                <a class="nav-item" href="{{ baseUrl }}issues">ISSUES</a>
+                <a class="nav-item" href="{{ baseUrl }}free_board">FREEBOARD</a>
+                <div class="spacer"></div>
+                <a class="nav-item" href="{{ portalUrl }}">Somehit.DEV</a>
+            </div>
+
+            {% block content %}{% endblock %}
+
+            <!-- footer -->
+            <div class="flex-row" id="footer">
+                <div class="spacer"></div>
+                <div style="margin-right:40px;display:flex;align-items:center;">Copyright© {{ yearString }} SOMEHIT.DEV</div>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </body>
+</html>
